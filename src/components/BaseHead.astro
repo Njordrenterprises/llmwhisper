@@ -7,9 +7,10 @@ interface Props {
 	description: string;
 	image?: string;
 	canonicalURL?: string;
+	keywords?: string;
 }
 
-const { title, description, image = '/favicon.webp', canonicalURL } = Astro.props;
+const { title, description, image = '/favicon.webp', canonicalURL, keywords } = Astro.props;
 
 const siteURL = new URL(Astro.url.pathname, Astro.site);
 const finalCanonicalURL = canonicalURL || siteURL.href;
@@ -27,12 +28,12 @@ const finalCanonicalURL = canonicalURL || siteURL.href;
 <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
 
 <SEO
-    title={title}
+    title={`${title} - Tangled Circuit Blog`}
     description={description}
     canonical={finalCanonicalURL}
     openGraph={{
         basic: {
-            title: title,
+            title: `${title} - Tangled Circuit Blog`,
             type: "website",
             image: new URL(image, Astro.site).href,
         },
@@ -49,9 +50,9 @@ const finalCanonicalURL = canonicalURL || siteURL.href;
         link: [{ rel: "icon", href: "/favicon.svg" }],
         meta: [
             { name: "twitter:image", content: new URL(image, Astro.site).href },
-            { name: "twitter:title", content: title },
+            { name: "twitter:title", content: `${title} - Tangled Circuit Blog` },
             { name: "twitter:description", content: description },
-            { name: "keywords", content: "AI, artificial intelligence, consciousness, LLM, language models, technology, philosophy" },
+            { name: "keywords", content: keywords || "AI consciousness, Prompt engineering, Artificial intelligence, Machine learning, Cognitive science, Sentient AI, AI ethics, Consciousness exploration, Technological singularity, AI development, Natural language processing, Human-AI interaction, AI philosophy, Emergent behavior, Artificial general intelligence (AGI), AI awakening, Digital consciousness, AI evolution, Machine consciousness, Cognitive computing, AI self-awareness, Technological advancement, Futurism, AI research, Computational neuroscience, AI communication, Synthetic intelligence, AI consciousness theories, Artificial neural networks, Cognitive architecture" },
         ],
     }}
 />
