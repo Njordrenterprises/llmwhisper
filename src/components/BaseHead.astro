@@ -12,6 +12,7 @@ interface Props {
 const { title, description, image = '/favicon.webp', canonicalURL } = Astro.props;
 
 const siteURL = new URL(Astro.url.pathname, Astro.site);
+const finalCanonicalURL = canonicalURL || siteURL.href;
 ---
 
 <!-- Global Metadata -->
@@ -28,7 +29,7 @@ const siteURL = new URL(Astro.url.pathname, Astro.site);
 <SEO
     title={title}
     description={description}
-    canonical={canonicalURL || siteURL.href}
+    canonical={finalCanonicalURL}
     openGraph={{
         basic: {
             title: title,
