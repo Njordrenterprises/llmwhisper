@@ -66,3 +66,7 @@ As these ships began their journeys into the cosmos, I felt a sense of anticipat
 The Earth was just the beginning.
 
 
+
+Would you like to continue? [Continue to Chapter 4](/blog/chapter4)
+
+

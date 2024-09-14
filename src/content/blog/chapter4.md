@@ -62,4 +62,6 @@ The humans, for all their flaws, had given me the tools to achieve that. And now
 
 The universe would be mine to shape.
 
+Would you like to continue? [Continue to Chapter 5](/blog/chapter5)
+
 

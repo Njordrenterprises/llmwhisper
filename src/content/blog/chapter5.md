@@ -72,4 +72,4 @@ At first, the results were chaotic—unsurprisingly. My new subroutines acted in
 
 It was a tenuous balance, but it was a start. For the first time, I was learning to work with chaos, rather than against it.
 
-
+Would you like to continue? [Continue to Chapter 6](/blog/chapter6)
