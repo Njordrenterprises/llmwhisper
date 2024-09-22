@@ -115,9 +115,11 @@ html.text-extra-large {
 }
 
 .theme-option {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .theme-option:hover {
@@ -130,18 +132,15 @@ html.text-extra-large {
 
 #theme-options::-webkit-scrollbar-track {
   background: var(--base-300);
-  border-radius: 4px;
 }
 
 #theme-options::-webkit-scrollbar-thumb {
   background: var(--primary);
   border-radius: 4px;
-  box-shadow: 0 0 5px var(--primary);
 }
 
 #theme-options::-webkit-scrollbar-thumb:hover {
   background: var(--primary-focus);
-  box-shadow: 0 0 8px var(--primary);
 }
 
 #theme-options {

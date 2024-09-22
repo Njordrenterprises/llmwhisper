@@ -18,6 +18,17 @@ const posts: Post[] = await getCollection('blog', (post: CollectionEntry<'blog'>
 });
 
 posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Define the folders array
+const folders = ['folder1', 'folder2', 'folder3']; // Add your folder names here
+
+const folderData = await Promise.all(folders.map(async (folder) => {
+  const posts = await getCollection('blog', (post) => post.id.startsWith(folder));
+  const firstPost = posts[0];
+  return { folder, firstPost };
+}));
+
+const folderImages = await Promise.all(folderData);
 ---
 
 <Layout title={`${folder?.charAt(0).toUpperCase()}${folder?.slice(1)} - ${SITE_TITLE}`} description={SITE_DESCRIPTION}>

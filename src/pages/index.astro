@@ -1,6 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+
+const folders = ['awakening', 'feelings'];
+
+const folderData = await Promise.all(
+  folders.map(async (folder) => {
+    const posts = await getCollection('blog', (post) => post.id.startsWith(folder));
+    const firstPost = posts[0];
+    const image = firstPost?.data.heroImage || '/default-whisper-image.jpg';
+    return { folder, image };
+  })
+);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} image="/Whisper.webp">

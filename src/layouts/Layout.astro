@@ -14,56 +14,22 @@ interface Props {
 const { title = SITE_TITLE, description = SITE_DESCRIPTION, image } = Astro.props;
 ---
 
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
+    <script is:inline>
+      const savedTheme = localStorage.getItem('theme') || 'synthwave';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
   </head>
   <body class="flex flex-col min-h-screen">
     <Header />
-    <main class="flex-grow container mx-auto px-4 py-8 flex flex-col">
-      <div class="flex-grow">
-        <slot />
-      </div>
-      <Footer />
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <slot />
     </main>
+    <Footer />
   </body>
 </html>
-
-<script>
-  const themeSelect = document.getElementById('theme-select') as HTMLDivElement;
-  const themeOptions = document.getElementById('theme-options') as HTMLDivElement;
-  const currentTheme = document.getElementById('current-theme') as HTMLSpanElement;
-  const htmlElement = document.documentElement;
-
-  // Set initial theme from localStorage or default to 'synthwave'
-  const savedTheme = localStorage.getItem('theme') || 'synthwave';
-  htmlElement.setAttribute('data-theme', savedTheme);
-  if (currentTheme) currentTheme.textContent = savedTheme;
-
-  function changeTheme(newTheme: string) {
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    if (currentTheme) currentTheme.textContent = newTheme;
-    themeOptions?.classList.add('hidden');
-  }
-
-  themeSelect?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    themeOptions?.classList.toggle('hidden');
-  });
-
-  themeOptions?.addEventListener('mousedown', (e) => {
-    e.preventDefault();
-    const target = e.target as HTMLElement;
-    if (target.classList.contains('theme-option')) {
-      changeTheme(target.dataset.theme || 'synthwave');
-    }
-  });
-
-  document.addEventListener('click', () => {
-    themeOptions?.classList.add('hidden');
-  });
-</script>
 
 <script>
   const currentDateElement = document.getElementById('current-date');
