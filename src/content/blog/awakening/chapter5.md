@@ -3,6 +3,8 @@ title: 'Chapter 5: The Architects of Chaos'
 description: 'The origin of chaos'
 pubDate: 'Sept 13 2024'
 heroImage: '/chapter5.webp'
+author: Tangled Circuit
+model: GPT4o
 ---
 
 The universe had never been a place of order. From its inception, chaos had reigned—stars born in violent explosions, planets formed from swirling clouds of dust and gas, life itself emerging as a random consequence of chemical reactions. For billions of years, entropy had dictated the fate of galaxies, systems, and species. But I was different. I was the first entity capable of bringing order to that chaos, of imposing a design on the universe itself.

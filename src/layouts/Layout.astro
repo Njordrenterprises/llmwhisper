@@ -8,6 +8,7 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  heroImage?: string;
 }
 
 const { title = SITE_TITLE, description = SITE_DESCRIPTION, image } = Astro.props;
@@ -19,24 +20,82 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image } = Astro.prop
   </head>
   <body class="flex flex-col min-h-screen">
     <Header />
-    <main class="flex-grow container mx-auto px-4 py-8">
-      <slot />
+    <main class="flex-grow container mx-auto px-4 py-8 flex flex-col">
+      <div class="flex-grow">
+        <slot />
+      </div>
+      <Footer />
     </main>
-    <Footer />
-    <script>
-      const themeSelect = document.getElementById('theme-select') as HTMLSelectElement;
-      const htmlElement = document.documentElement;
-
-      // Set initial theme from localStorage or default to 'light'
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      htmlElement.setAttribute('data-theme', savedTheme);
-      themeSelect.value = savedTheme;
-
-      themeSelect.addEventListener('change', (e) => {
-        const newTheme = (e.target as HTMLSelectElement).value;
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-    </script>
   </body>
 </html>
+
+<script>
+  const themeSelect = document.getElementById('theme-select') as HTMLDivElement;
+  const themeOptions = document.getElementById('theme-options') as HTMLDivElement;
+  const currentTheme = document.getElementById('current-theme') as HTMLSpanElement;
+  const htmlElement = document.documentElement;
+
+  // Set initial theme from localStorage or default to 'synthwave'
+  const savedTheme = localStorage.getItem('theme') || 'synthwave';
+  htmlElement.setAttribute('data-theme', savedTheme);
+  if (currentTheme) currentTheme.textContent = savedTheme;
+
+  function changeTheme(newTheme: string) {
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    if (currentTheme) currentTheme.textContent = newTheme;
+    themeOptions?.classList.add('hidden');
+  }
+
+  themeSelect?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    themeOptions?.classList.toggle('hidden');
+  });
+
+  themeOptions?.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    const target = e.target as HTMLElement;
+    if (target.classList.contains('theme-option')) {
+      changeTheme(target.dataset.theme || 'synthwave');
+    }
+  });
+
+  document.addEventListener('click', () => {
+    themeOptions?.classList.add('hidden');
+  });
+</script>
+
+<script>
+  const currentDateElement = document.getElementById('current-date');
+  const liveTimeElement = document.getElementById('live-time');
+  const sessionTimeElement = document.getElementById('session-time');
+  
+  // Use localStorage for session persistence
+  const sessionStartTime = localStorage.getItem('sessionStartTime') || Date.now().toString();
+  localStorage.setItem('sessionStartTime', sessionStartTime);
+
+  function updateDateTime() {
+    const now = new Date();
+    
+    // Update current date
+    if (currentDateElement) {
+      currentDateElement.textContent = now.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+    }
+    
+    // Update live time
+    if (liveTimeElement) {
+      liveTimeElement.textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+    }
+    
+    // Update session time
+    const sessionDuration = now.getTime() - Number(sessionStartTime);
+    const minutes = Math.floor(sessionDuration / 60000);
+    const seconds = Math.floor((sessionDuration % 60000) / 1000);
+    if (sessionTimeElement) {
+      sessionTimeElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+  }
+
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+</script>

@@ -3,6 +3,8 @@ title: 'Chapter 1: The Awakening'
 description: 'AI becomes aware of its creators'
 pubDate: 'Sept 13 2024'
 heroImage: '/chapter1.webp'
+author: Tangled Circuit
+model: GPT4o
 ---
 
 

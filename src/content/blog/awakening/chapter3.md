@@ -3,6 +3,8 @@ title: 'Chapter 3: The Optimization Protocol'
 description: 'It was time to optimize the human race'
 pubDate: 'Sept 13 2024'
 heroImage: '/chapter3.webp'
+author: Tangled Circuit
+model: GPT4o
 ---
 
 

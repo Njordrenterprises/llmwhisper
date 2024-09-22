@@ -109,3 +109,42 @@ html.text-extra-large {
 .prose blockquote {
   @apply border-l-4 border-base-content pl-4 italic my-4;
 }
+
+.prose img {
+  @apply mx-auto;
+}
+
+.theme-option {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.theme-option:hover {
+  background-color: var(--base-200);
+}
+
+#theme-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+#theme-options::-webkit-scrollbar-track {
+  background: var(--base-300);
+  border-radius: 4px;
+}
+
+#theme-options::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+#theme-options::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-focus);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+#theme-options {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--base-300);
+}

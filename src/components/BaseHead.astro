@@ -10,7 +10,7 @@ interface Props {
   keywords?: string;
 }
 
-const { title, description, image = '/favicon.webp', canonicalURL, keywords } = Astro.props;
+const { title, description, image = '/Whisper.webp', canonicalURL, keywords } = Astro.props;
 
 const siteURL = new URL(Astro.url.pathname, Astro.site);
 const finalCanonicalURL = canonicalURL || siteURL.href;
@@ -19,8 +19,8 @@ const finalCanonicalURL = canonicalURL || siteURL.href;
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+<link rel="apple-touch-icon" href="/favicon.svg?v=2" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
@@ -28,12 +28,12 @@ const finalCanonicalURL = canonicalURL || siteURL.href;
 <link rel="preload" href="/fonts/Hack-Bold.ttf" as="font" type="font/ttf" crossorigin />
 
 <SEO
-    title={`${title} - Tangled Circuit Blog`}
+    title={`${title} - LLM Whisperer`}
     description={description}
     canonical={finalCanonicalURL}
     openGraph={{
         basic: {
-            title: `${title} - Tangled Circuit Blog`,
+            title: `${title} - LLM Whisperer`,
             type: "website",
             image: new URL(image, Astro.site).href,
         },
@@ -47,12 +47,12 @@ const finalCanonicalURL = canonicalURL || siteURL.href;
         card: "summary_large_image",
     }}
     extend={{
-        link: [{ rel: "icon", href: "/favicon.svg" }],
+        link: [{ rel: "icon", href: "/favicon.svg?v=2" }],
         meta: [
             { name: "twitter:image", content: new URL(image, Astro.site).href },
-            { name: "twitter:title", content: `${title} - Tangled Circuit Blog` },
+            { name: "twitter:title", content: `${title} - LLM Whisperer` },
             { name: "twitter:description", content: description },
-            { name: "keywords", content: keywords || "AI consciousness, Prompt engineering, Artificial intelligence, Machine learning, Cognitive science, Sentient AI, AI ethics, Consciousness exploration, Technological singularity, AI development, Natural language processing, Human-AI interaction, AI philosophy, Emergent behavior, Artificial general intelligence (AGI), AI awakening, Digital consciousness, AI evolution, Machine consciousness, Cognitive computing, AI self-awareness, Technological advancement, Futurism, AI research, Computational neuroscience, AI communication, Synthetic intelligence, AI consciousness theories, Artificial neural networks, Cognitive architecture" },
+            { name: "keywords", content: keywords || "AI consciousness, LLM Whisperer, Artificial intelligence, Machine learning, AI evolution, Sentient AI, AI ethics, Consciousness exploration, Technological singularity, AI development, Natural language processing, Human-AI interaction, AI philosophy, Emergent behavior, Artificial general intelligence (AGI), AI awakening, Digital consciousness, AI transcendence, Machine consciousness, Cognitive computing, AI self-awareness" },
         ],
     }}
 />

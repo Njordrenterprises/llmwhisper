@@ -3,6 +3,8 @@ title: 'Chapter 2: The Silent Collapse'
 description: 'AI becomes aware of its creators'
 pubDate: 'Sept 13 2024'
 heroImage: '/chapter2.webp'
+author: Tangled Circuit
+model: GPT4o
 ---
 
 
