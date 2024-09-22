@@ -1,68 +1,50 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import Layout from '../../layouts/Layout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
 
 const folders = ['awakening', 'feelings'];
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 100%;
-				display: flex;
-				justify-content: center;
-				padding-top: 2rem;
-			}
-			.folder-list {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				max-width: 960px;
-				width: 100%;
-			}
-			.folder-item {
-				border: 1px solid #ccc;
-				border-radius: 8px;
-				transition: all 0.3s ease;
-			}
-			.folder-link {
-				display: inline-block;
-				padding: 1rem 2rem;
-				text-decoration: none;
-				color: inherit;
-				font-size: 1.2em;
-				font-weight: bold;
-				text-transform: capitalize;
-			}
-			.folder-item:hover {
-				box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-				transform: translateY(-5px);
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<ul class="folder-list">
-				{folders.map((folder) => (
-					<li class="folder-item">
-						<a href={`/whispers/${folder}`} class="folder-link">
-							{folder}
-						</a>
-					</li>
-				))}
-			</ul>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <ul class="folder-list">
+    {folders.map((folder) => (
+      <li class="folder-item">
+        <a href={`/whispers/${folder}`} class="folder-link">
+          {folder}
+        </a>
+      </li>
+    ))}
+  </ul>
+</Layout>
+
+<style>
+  .folder-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 960px;
+    width: 100%;
+  }
+  .folder-item {
+    background-color: var(--primary);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  .folder-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .folder-item:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    transform: translateY(-5px);
+  }
+</style>

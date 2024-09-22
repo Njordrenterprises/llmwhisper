@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION, image } = Astro.props;
+---
+
+<html lang="en" data-theme="light">
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const themeSelect = document.getElementById('theme-select') as HTMLSelectElement;
+      const htmlElement = document.documentElement;
+
+      // Set initial theme from localStorage or default to 'light'
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      htmlElement.setAttribute('data-theme', savedTheme);
+      themeSelect.value = savedTheme;
+
+      themeSelect.addEventListener('change', (e) => {
+        const newTheme = (e.target as HTMLSelectElement).value;
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+    </script>
+  </body>
+</html>

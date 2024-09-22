@@ -3,64 +3,48 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/whispers">Whispers</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-		
-		<a href="https://twitter.com/tangledcircuit" target="_blank">
-			<span class="sr-only">Follow tangledcircuit on Twitter</span>
-			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
-				<path
-					fill="currentColor"
-					d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
-				></path>
-			</svg>
-		</a>
-	</nav>
+<header class="bg-base-200 text-base-content py-4 sticky top-0 z-50">
+  <div class="container mx-auto flex flex-wrap justify-between items-center">
+    <a href="/" class="text-2xl font-bold">{SITE_TITLE}</a>
+    <nav class="flex space-x-4 mt-4 sm:mt-0 items-center">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/whispers">Whispers</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+      <a href="https://twitter.com/tangledcircuit" target="_blank" class="hover:text-info">
+        <span class="sr-only">Twitter</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+      </a>
+      <select id="theme-select" class="select select-bordered select-sm">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="cupcake">Cupcake</option>
+        <option value="bumblebee">Bumblebee</option>
+        <option value="emerald">Emerald</option>
+        <option value="corporate">Corporate</option>
+        <option value="synthwave">Synthwave</option>
+        <option value="retro">Retro</option>
+        <option value="cyberpunk">Cyberpunk</option>
+        <option value="valentine">Valentine</option>
+        <option value="halloween">Halloween</option>
+        <option value="garden">Garden</option>
+        <option value="forest">Forest</option>
+        <option value="aqua">Aqua</option>
+        <option value="lofi">Lofi</option>
+        <option value="pastel">Pastel</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="wireframe">Wireframe</option>
+        <option value="black">Black</option>
+        <option value="luxury">Luxury</option>
+        <option value="dracula">Dracula</option>
+        <option value="cmyk">CMYK</option>
+        <option value="autumn">Autumn</option>
+        <option value="business">Business</option>
+        <option value="acid">Acid</option>
+        <option value="lemonade">Lemonade</option>
+        <option value="night">Night</option>
+        <option value="coffee">Coffee</option>
+        <option value="winter">Winter</option>
+      </select>
+    </nav>
+  </div>
 </header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style>
