@@ -1,0 +1,60 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+
+const folders = ['awakening', 'feelings'];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 960px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+				padding: 3em 1em;
+			}
+			.folder-list {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+				gap: 2rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			.folder-item {
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				padding: 1rem;
+				text-align: center;
+			}
+			.folder-link {
+				text-decoration: none;
+				color: inherit;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<h1>Whispers</h1>
+				<ul class="folder-list">
+					{folders.map((folder) => (
+						<li class="folder-item">
+							<a href={`/whispers/${folder}`} class="folder-link">
+								<h2>{folder.charAt(0).toUpperCase() + folder.slice(1)}</h2>
+							</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
