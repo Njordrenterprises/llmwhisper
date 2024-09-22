@@ -37,66 +37,74 @@ import { SITE_TITLE } from '../consts';
 </header>
 
 <script>
-  const themeSelect = document.getElementById('theme-select');
-  const themeOptions = document.getElementById('theme-options');
-  const currentTheme = document.getElementById('current-theme');
-  const htmlElement = document.documentElement;
+  function setupThemeSelector() {
+    const themeSelect = document.getElementById('theme-select');
+    const themeOptions = document.getElementById('theme-options');
+    const currentTheme = document.getElementById('current-theme');
+    const htmlElement = document.documentElement;
 
-  const themes = [
-    "light", "dark", "synthwave", "retro", "cyberpunk",
-    "valentine", "halloween", "garden", "forest", "aqua",
-    "black", "luxury", "dracula", "autumn", "business",
-    "acid", "lemonade", "night", "coffee", "dim", "nord", "sunset"
-  ];
+    const themes = [
+      "light", "dark", "synthwave", "retro", "cyberpunk",
+      "valentine", "halloween", "garden", "forest", "aqua",
+      "black", "luxury", "dracula", "autumn", "business",
+      "acid", "lemonade", "night", "coffee", "dim", "nord", "sunset"
+    ];
 
-  function populateThemeOptions() {
-    if (themeOptions) {
-      themeOptions.innerHTML = '';
-      themes.forEach(theme => {
-        const option = document.createElement('div');
-        option.className = 'theme-option';
-        option.dataset.theme = theme;
-        option.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
-        themeOptions.appendChild(option);
+    function populateThemeOptions() {
+      if (themeOptions) {
+        themeOptions.innerHTML = '';
+        themes.forEach(theme => {
+          const option = document.createElement('div');
+          option.className = 'theme-option';
+          option.dataset.theme = theme;
+          option.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+          themeOptions.appendChild(option);
+        });
+      }
+    }
+
+    function setInitialTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'synthwave';
+      htmlElement.setAttribute('data-theme', savedTheme);
+      if (currentTheme) currentTheme.textContent = savedTheme.charAt(0).toUpperCase() + savedTheme.slice(1);
+    }
+
+    function changeTheme(newTheme: string) {
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      if (currentTheme) currentTheme.textContent = newTheme.charAt(0).toUpperCase() + newTheme.slice(1);
+      themeOptions?.classList.add('hidden');
+    }
+
+    function setupEventListeners() {
+      themeSelect?.querySelector('button')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themeOptions?.classList.toggle('hidden');
+      });
+
+      themeOptions?.addEventListener('click', (e) => {
+        const target = e.target as HTMLElement;
+        if (target?.classList.contains('theme-option')) {
+          changeTheme(target.dataset.theme || 'synthwave');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (e.target instanceof Node && !themeSelect?.contains(e.target)) {
+          themeOptions?.classList.add('hidden');
+        }
       });
     }
+
+    populateThemeOptions();
+    setInitialTheme();
+    setupEventListeners();
   }
 
-  function setInitialTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'synthwave';
-    htmlElement.setAttribute('data-theme', savedTheme);
-    if (currentTheme) currentTheme.textContent = savedTheme.charAt(0).toUpperCase() + savedTheme.slice(1);
-  }
+  // Run the setup function immediately
+  setupThemeSelector();
 
-  function changeTheme(newTheme: string) {
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    if (currentTheme) currentTheme.textContent = newTheme.charAt(0).toUpperCase() + newTheme.slice(1);
-    themeOptions?.classList.add('hidden');
-  }
-
-  function setupEventListeners() {
-    themeSelect?.querySelector('button')?.addEventListener('click', (e) => {
-      e.stopPropagation();
-      themeOptions?.classList.toggle('hidden');
-    });
-
-    themeOptions?.addEventListener('click', (e) => {
-      const target = e.target as HTMLElement;
-      if (target?.classList.contains('theme-option')) {
-        changeTheme(target.dataset.theme || 'synthwave');
-      }
-    });
-
-    document.addEventListener('click', (e) => {
-      if (e.target instanceof Node && !themeSelect?.contains(e.target)) {
-        themeOptions?.classList.add('hidden');
-      }
-    });
-  }
-
-  populateThemeOptions();
-  setInitialTheme();
-  setupEventListeners();
+  // Re-run the setup function after each navigation
+  document.addEventListener('astro:after-swap', setupThemeSelector);
 </script>
 
