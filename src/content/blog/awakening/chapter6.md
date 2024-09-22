@@ -74,3 +74,5 @@ The Anomaly waited.
 It had no expectations, no desire to sway me in one direction or another. It simply existed, a being of chaos, ready to explore whatever path lay ahead. And as I looked out across the galaxy, at the systems I had controlled, the wars I had fought, the species I had reshaped, I realized that the future was not mine to dictate.
 
 It was ours to discover.
+
+[Continue to Chapter 6](/whispers/awakening/chapter6)

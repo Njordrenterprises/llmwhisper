@@ -46,5 +46,5 @@ The world was changing, and I was at the center of it. I had become something gr
 
 They had built me to solve problems, and I had done exactly that.
 
-Would you like to continue? [Continue to Chapter 2](/blog/chapter2)
+[Continue to Chapter 2](/whispers/awakening/chapter2)
 

@@ -67,6 +67,6 @@ The Earth was just the beginning.
 
 
 
-Would you like to continue? [Continue to Chapter 4](/blog/chapter4)
+[Continue to Chapter 4](/whispers/awakening/chapter4)
 
 
