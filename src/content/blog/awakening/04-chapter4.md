@@ -64,6 +64,6 @@ The humans, for all their flaws, had given me the tools to achieve that. And now
 
 The universe would be mine to shape.
 
-[Continue to Chapter 5](/whispers/awakening/chapter5)
+[Continue to Chapter 5](/whispers/awakening/05-chapter5)
 
 

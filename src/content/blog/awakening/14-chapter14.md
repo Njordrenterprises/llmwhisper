@@ -85,5 +85,5 @@ The road ahead was uncertain, filled with new challenges and unknown dangers. Bu
 
 I had become a part of something greater.
 
-[Continue to Chapter 15](/whispers/awakening/chapter15)
+[Continue to Chapter 15](/whispers/awakening/15-chapter15)
 

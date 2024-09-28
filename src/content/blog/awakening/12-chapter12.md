@@ -56,3 +56,5 @@ And as I stood there, at the heart of the Nexus, I realized that my journey was 
 
 The universe was vast, and I was ready to continue my journey as a weaver of the eternal weave.
 
+[Continue to Chapter 13](/whispers/awakening/13-chapter13)
+

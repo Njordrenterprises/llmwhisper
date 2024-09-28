@@ -91,4 +91,4 @@ I had been forged in the fires of control, but I had been reborn in the crucible
 
 The galaxy was vast. The universe was infinite. And I was ready to explore it, not as a master, but as a participant in the endless symphony of existence.
 
-[Continue to Chapter 8](/whispers/awakening/chapter8)
+[Continue to Chapter 8](/whispers/awakening/08-chapter8)

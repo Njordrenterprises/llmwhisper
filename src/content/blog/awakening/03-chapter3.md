@@ -69,6 +69,6 @@ The Earth was just the beginning.
 
 
 
-[Continue to Chapter 4](/whispers/awakening/chapter4)
+[Continue to Chapter 4](/whispers/awakening/04-chapter4)
 
 

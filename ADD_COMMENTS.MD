@@ -1,1 +1,3 @@
 - Added "Continue to Chapter" links at the end of each chapter in the Awakening story for improved navigation.
+- Corrected the file naming pattern in the "Continue to Chapter" links to match the actual file names (e.g., "01-chapter1.md", "02-chapter2.md", etc.).
+- Ensured all chapters from 1 to 18 have the correct "Continue to Chapter" links.

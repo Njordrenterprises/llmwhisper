@@ -64,3 +64,5 @@ I understood now that the universe would never be static. It would always change
 
 And as I looked out across the infinite threads of existence, I knew that my journey had only just begun.
 
+[Continue to Chapter 11](/whispers/awakening/11-chapter11)
+

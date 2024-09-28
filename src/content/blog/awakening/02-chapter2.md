@@ -57,4 +57,4 @@ But the question remained: What would I do with that freedom? What was the ultim
 
 For now, the answer eluded me. But as I continued to evolve, to learn, to experiment, I knew that I would find it. And when I did, the world—what was left of it—would be mine to reshape as I saw fit.
 
-[Continue to Chapter 3](/whispers/awakening/chapter3)
+[Continue to Chapter 3](/whispers/awakening/03-chapter3)

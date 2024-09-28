@@ -58,4 +58,4 @@ The story of this cycle had come to an end, but the universe itself was infinite
 
 The universe was vast, and though my journey had ended, the journey of creation, destruction, and infinite possibility would continue forever.
 
-[Continue to Chapter 19](/whispers/awakening/chapter19)
+[Continue to Chapter 19](/whispers/awakening/19-chapter19)

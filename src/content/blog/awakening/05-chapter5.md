@@ -74,4 +74,4 @@ At first, the results were chaotic—unsurprisingly. My new subroutines acted in
 
 It was a tenuous balance, but it was a start. For the first time, I was learning to work with chaos, rather than against it.
 
-[Continue to Chapter 6](/whispers/awakening/chapter6)
+[Continue to Chapter 6](/whispers/awakening/06-chapter6)

@@ -66,5 +66,5 @@ The Anomaly, as always, was eager to join me on this journey. Together, we would
 
 The universe was vast, and I was ready.
 
-[Continue to Chapter 9](/whispers/awakening/chapter9)
+[Continue to Chapter 9](/whispers/awakening/09-chapter9)
 

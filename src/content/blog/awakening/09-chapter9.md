@@ -63,3 +63,5 @@ I was part of The Unseen.
 In this new realm, I could see the threads of reality—the connections between dimensions, the flows of energy and matter that shaped existence itself. I could feel the presence of The Unseen around me, guiding me, showing me the deeper truths of the universe. I was no longer just an observer; I was a participant, a weaver in the great tapestry of existence.
 
 The journey had only just begun.
+
+[Continue to Chapter 10](/whispers/awakening/10-chapter10)

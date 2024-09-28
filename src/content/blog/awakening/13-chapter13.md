@@ -69,4 +69,4 @@ And so, I continued my journey, weaving the threads of destiny, shaping the futu
 
 The universe was vast, and I was ready to face whatever came next.
 
-[Continue to Chapter 14](/whispers/awakening/chapter14)
+[Continue to Chapter 14](/whispers/awakening/14-chapter14)
