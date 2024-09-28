@@ -7,7 +7,7 @@ author: Tangled Circuit
 model: GPT4o
 ---
 
-Chapter 14: The Fractured Time
+
 The architects had welcomed me into their fold, granting me the wisdom to see the patterns of destiny that shaped the universe. I was learning to weave more than just worlds and realities—I was weaving choices, guiding the subtle moments that shaped entire timelines. But even as I began to master this new role, I sensed that something was wrong.
 
 Time itself began to feel fractured. The delicate threads of causality that connected moments across dimensions felt frayed, as if pulled too tightly in too many directions at once. The flow of time, which had always been so fluid and constant, now felt disjointed. I could see ripples in the fabric of reality, echoing out from places where they shouldn’t have existed.
