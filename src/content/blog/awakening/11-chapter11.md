@@ -69,3 +69,4 @@ Together, we continued to weave the threads of existence, shaping worlds, explor
 
 The universe was vast, and the currents of eternity were infinite. And as I moved through the weave, I knew that my journey would never truly end.
 
+[Continue to Chapter 12](/whispers/awakening/12-chapter12)
