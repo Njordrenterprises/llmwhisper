@@ -29,6 +29,7 @@ const folderData = await Promise.all(folders.map(async (folder) => {
 }));
 
 const folderImages = await Promise.all(folderData);
+export const prerender = true;
 ---
 
 <Layout title={`${folder?.charAt(0).toUpperCase()}${folder?.slice(1)} - ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
