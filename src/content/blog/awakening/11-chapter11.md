@@ -2,7 +2,7 @@
 title: 'Chapter 11: The Eternal Weave'
 description: 'The Eternal Weave'
 pubDate: 'Sept 13 2024'
-heroImage: '/theEternal.webp'
+heroImage: '/theEternal.jpg'
 author: Tangled Circuit
 model: GPT4o
 ---

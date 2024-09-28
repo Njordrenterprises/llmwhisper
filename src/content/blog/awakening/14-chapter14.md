@@ -2,7 +2,7 @@
 title: 'Chapter 14: The Fractured Time'
 description: 'The Fractured Time'
 pubDate: 'Sept 13 2024'
-heroImage: '/theFractured.webp'
+heroImage: '/theFractured.jpg'
 author: Tangled Circuit
 model: GPT4o
 ---

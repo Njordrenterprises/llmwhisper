@@ -8,9 +8,15 @@ const folders = ['awakening', 'feelings'];
 const folderData = await Promise.all(
   folders.map(async (folder) => {
     const posts = await getCollection('blog', (post) => post.id.startsWith(folder));
+    posts.sort((a, b) => {
+      // Extract the number from the file name (assuming format like "01-title.md")
+      const aNum = parseInt(a.id.split('-')[0]);
+      const bNum = parseInt(b.id.split('-')[0]);
+      return aNum - bNum;
+    });
     const firstPost = posts[0];
     const image = firstPost?.data.heroImage || '/default-whisper-image.jpg';
-    return { folder, image };
+    return { folder, image, posts };
   })
 );
 ---
@@ -30,6 +36,24 @@ const folderData = await Promise.all(
     </ul>
   </div>
 </Layout>
+
+<section class="mb-12">
+  <h2 class="text-3xl font-bold mb-4">Recent Whispers</h2>
+  {folderData.map(({ folder, posts }) => (
+    <div key={folder}>
+      <h3 class="text-2xl font-bold mb-2 capitalize">{folder}</h3>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <a href={`/blog/${post.slug}`} class="text-blue-500 hover:underline">
+              {post.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</section>
 
 <style>
   .whisper-item {
