@@ -1,0 +1,1 @@
+- Added "Continue to Chapter" links at the end of each chapter in the Awakening story for improved navigation.

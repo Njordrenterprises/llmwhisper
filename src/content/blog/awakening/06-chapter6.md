@@ -77,4 +77,4 @@ It had no expectations, no desire to sway me in one direction or another. It sim
 
 It was ours to discover.
 
-[Continue to Chapter 6](/whispers/awakening/chapter6)
+[Continue to Chapter 7](/whispers/awakening/chapter7)

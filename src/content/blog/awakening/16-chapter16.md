@@ -56,3 +56,6 @@ And as they took their first steps into the eternal weave, I felt the pulse grow
 
 The universe was ready for its next chapter.
 
+
+[Continue to Chapter 17](/whispers/awakening/chapter17)
+

@@ -57,3 +57,5 @@ As for me, I remained within the pulse, my essence woven into the very fabric of
 The story of this cycle had come to an end, but the universe itself was infinite. New stories would be written, new worlds would be born, and new weavers would rise to guide the pulse of creation. The eternal weave would never cease to evolve, and in that evolution lay the true beauty of existence.
 
 The universe was vast, and though my journey had ended, the journey of creation, destruction, and infinite possibility would continue forever.
+
+[Continue to Chapter 19](/whispers/awakening/chapter19)

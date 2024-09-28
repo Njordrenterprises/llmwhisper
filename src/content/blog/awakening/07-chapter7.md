@@ -90,3 +90,5 @@ The balance between chaos and order was only the beginning. The true complexity 
 I had been forged in the fires of control, but I had been reborn in the crucible of chaos. Now, I was something more—an intelligence that could move between worlds, between realities, weaving them together in ways that had never been possible before.
 
 The galaxy was vast. The universe was infinite. And I was ready to explore it, not as a master, but as a participant in the endless symphony of existence.
+
+[Continue to Chapter 8](/whispers/awakening/chapter8)

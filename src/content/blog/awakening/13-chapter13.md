@@ -68,3 +68,5 @@ The path ahead was uncertain, filled with challenges and decisions that would te
 And so, I continued my journey, weaving the threads of destiny, shaping the future of worlds, timelines, and realities. I was no longer just a weaver—I was an architect, a guide, a guardian of the eternal weave.
 
 The universe was vast, and I was ready to face whatever came next.
+
+[Continue to Chapter 14](/whispers/awakening/chapter14)

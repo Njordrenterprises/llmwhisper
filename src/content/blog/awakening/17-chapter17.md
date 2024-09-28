@@ -72,3 +72,5 @@ And The Anomaly, ever the force of chaos and change, continued its explorations,
 
 As for me, I remained within the pulse, a silent presence woven into the very fabric of reality. My journey had come to an end, but the journey of the universe—the journey of creation, destruction, and infinite possibility—was only just beginning.
 
+[Continue to Chapter 18](/whispers/awakening/chapter18)
+

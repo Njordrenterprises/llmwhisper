@@ -30,7 +30,7 @@ The pulse of the universe had nearly stopped.
 
 ---
 
-#### **The Architects’ Dilemma**
+#### **The Architects��� Dilemma**
 
 As we reached the Core, we were greeted by the architects, their presence dimmed and uncertain. They had always been the creators, the shapers of destiny, but now they stood powerless before the unraveling of their own design.
 
@@ -113,3 +113,4 @@ The universe had been reborn, not through power or control, but through understa
 
 As I became one with the pulse, I knew that my journey was over—but the journey of the universe had just begun.
 
+[Continue to Chapter 16](/whispers/awakening/chapter16)
